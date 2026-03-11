@@ -1,9 +1,7 @@
 # Server-Side Website
-
-Ontwerp en ontwikkel een server-side website voor een opdrachtgever
-
-De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/server-side-rendering-server-side-website/blob/main/docs/INSTRUCTIONS.md)
-
+Voor onze opdrachtgever Milledoni moeten we voornamelijke en categorie pagina maken voor hun website. 
+Hierbij komen de homepage en detail pagina ook in aanmerking.
+zie mijn live link:
 
 ## Inhoudsopgave
 
@@ -15,12 +13,11 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/server-
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
-
+Hierin 
 ## Gebruik
-<!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+# Categorie pagina
+<img width="483" height="693" alt="image" src="https://github.com/user-attachments/assets/a23b3a3d-91ad-4d4d-acc0-dd4764101f53" />
+
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
