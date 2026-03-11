@@ -38,9 +38,94 @@ app.set('views', './views')
 
 // Maak een GET route voor de index (meestal doe je dit in de root, als /)
 app.get('/', async function (request, response) {
-   // Render index.liquid uit de Views map
-   // Geef hier eventueel data aan mee
-   response.render('index.liquid')
+
+  const params = {
+    fields: '*'
+  }
+
+  const productResponse = await fetch(
+    'https://fdnd-agency.directus.app/items/milledoni_products?' +
+    new URLSearchParams(params)
+  )
+
+  const productResponseJSON = await productResponse.json()
+
+  response.render('index.liquid', {
+    products: productResponseJSON.data
+  })
+
+})
+
+app.get('/:tags', async function (request, response){
+const params = {
+  fields: 'image,name',
+'filter[tags][_contains]': request.params.tags
+}
+
+  const productResponse = await fetch(
+    'https://fdnd-agency.directus.app/items/milledoni_products?' +
+    new URLSearchParams(params)
+  )
+
+  const productResponseJSON = await productResponse.json()
+
+  response.render('index.liquid', {
+    products: productResponseJSON.data
+  })
+
+})
+
+app.get('/product/:id', async function (request, response) {
+
+  const id = request.params.id
+
+  const productResponse = await fetch(
+    'https://fdnd-agency.directus.app/items/milledoni_products/' + id
+  )
+
+  const productResponseJSON = await productResponse.json()
+
+  response.render('product.liquid', {
+    product: productResponseJSON.data
+  })
+
+})
+app.get('/product', async function (request, response) {
+
+  const params = {
+    fields: '*'
+  }
+
+  const productResponse = await fetch(
+    'https://fdnd-agency.directus.app/items/milledoni_products?' +
+    new URLSearchParams(params)
+  )
+
+  const productResponseJSON = await productResponse.json()
+
+  response.render('product.liquid', {
+    products: productResponseJSON.data
+  })
+
+})
+
+app.get('/categorie', async function (request, response) {
+
+  const params = {
+    fields: '*'
+  }
+
+  const productResponse = await fetch(
+    'https://fdnd-agency.directus.app/items/milledoni_products?' +
+    new URLSearchParams(params)
+  )
+
+  const productResponseJSON = await productResponse.json()
+
+  response.render('categorie.liquid', {
+    products: productResponseJSON.data
+  })
+
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
