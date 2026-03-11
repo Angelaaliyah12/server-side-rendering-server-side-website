@@ -1,7 +1,7 @@
 # Server-Side Website
 Voor onze opdrachtgever Milledoni moeten we voornamelijke en categorie pagina maken voor hun website. 
 Hierbij komen de homepage en detail pagina ook in aanmerking.
-zie mijn live link:
+zie mijn live link:  https://server-side-rendering-server-side-website-7xpe.onrender.com
 
 ## Inhoudsopgave
 
