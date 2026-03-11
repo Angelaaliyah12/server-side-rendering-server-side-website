@@ -56,6 +56,26 @@ app.get('/', async function (request, response) {
 
 })
 
+app.get('/valentijnsdag', async function (request, response) {
+
+  const params = {
+    fields: '*',
+    'filter[tags][_contains]': 'valentijnsdag'
+  }
+
+  const productResponse = await fetch(
+    'https://fdnd-agency.directus.app/items/milledoni_products?' +
+    new URLSearchParams(params)
+  )
+
+  const productResponseJSON = await productResponse.json()
+
+  response.render('valentijnsdag.liquid', {
+    products: productResponseJSON.data
+  })
+
+})
+
 app.get('/:tags', async function (request, response){
 const params = {
   fields: 'image,name',
