@@ -1,0 +1,12 @@
+
+<ul>
+  {% for product in products %}
+  <li>
+    <a href="/product/{{ product.id }}">
+      <img class="img-categorie" src="{{ product.image }}" alt="{{ product.name }}">
+    </a>
+
+    <h2>{{ product.name }}</h2>
+  </li>
+  {% endfor %}
+</ul>
